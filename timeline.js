@@ -1,4 +1,4 @@
-<!-- <SCRIPT> from a simple timeline w/basic elements from live-tweets-template-script-js & weekend-picks-template-script.js-->
+<!-- <SCRIPT> from a simple timeline-->
   
   <!--rename to timeline.js and then add script.js from dummy.js???-->
 

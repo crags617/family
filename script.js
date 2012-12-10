@@ -1,5 +1,8 @@
-<!-- <SCRIPT> from a simple timeline-->
+<!-- <SCRIPT> from a simple timeline w/basic elements from live-tweets-template-script-js & weekend-picks-template-script.js-->
+  
+  <!--rename to timeline.js and then add script.js from dummy.js???-->
 
+  
 var map = mapbox.map('map');
   map.addLayer(mapbox.layer().id('examples.map-20v6611k'));
 

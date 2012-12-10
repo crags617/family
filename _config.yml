@@ -1,0 +1,8 @@
+auto: true
+safe: true
+server: true
+permalink: none
+baseurl: "live-tweets-template"
+exclude:
+ - .gitignore
+ - README.md

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+  <title>Geographic Evolution of my Family</title>
+    <link rel="stylesheet" href="fonts/fonts.css" type="text/css" />
+    <link rel="stylesheet" href="css/map.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+  <div id="header">
+      <h1>Geographic Evolution of my Family</h1>
+    </div>
+  
+    <div id="content">
+        <div id="about">
+            <h2>About this Site</h2>
+            <p>...</p>
+        </div>
+    </div>
+
+    <div id="map" class="map"></div>
+        
+    <!-- External libraries and site script -->
+    <script src="ext/jquery.min.js"></script>
+    <script src="ext/modestmaps.min.js"></script>
+    <script src="ext/wax/wax.mm.js"></script>
+    <script src="ext/wax/wax.ext.js"></script>
+    <script src="ext/easey.js"></script>
+    <script src="ext/mmg.js"></script>
+    <script src="script.js"></script>
+    <!-- maybe...
+      <script src="ext/underscore.min.js"></script> (in live tweets api)
+      <script src="ext/simplestyle_factory.js"></script> (in weekend picks)
+      <script src="ext/mmg_interaction.js"></script> (wp)-->
+    
+    <!-- Site configuration -->
+    <script type="text/javascript">
+
+        // Make a new map in the #map element
+        var main = Map('map', {
+            //MapBox API url
+            api: 'http://a.tiles.mapbox.com/v3/crags617.craginfam.jsonp',
+            // Intial center point and zoom level
+            center: {           
+                lat: 22,        
+                lon: -9,       
+                zoom: 1        
+            },
+            zoomRange: [1, 8], 
+            features: [
+                'zoomwheel',
+                'zoombox',
+                'zoompan',
+                'legend',
+                'share'
+                'tooltips',
+                'bwdetect'
+            ]
+        }, function(tilejson) { <!--might not want to use this...-->
+          $('p.description').text(tilejson.description);
+        });
+    </script>
+</body>
+</html>

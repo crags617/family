@@ -40,11 +40,10 @@
     <!-- Site configuration -->
     <script type="text/javascript">
 
-        // Make a new map in the #map element
         var main = Map('map', {
-            //MapBox API url
+          /*MapBox API url*/
             api: 'http://a.tiles.mapbox.com/v3/crags617.craginfam.jsonp',
-            // Intial center point and zoom level
+          /*Intial center point and zoom level*/
             center: {           
                 lat: 22,        
                 lon: -9,       
@@ -60,7 +59,7 @@
                 'tooltips',
                 'bwdetect'
             ]
-        }, function(tilejson) { <!--might not want to use this...-->
+        }, function(tilejson) { /*might not want to use this...*/
           $('p.description').text(tilejson.description);
         });
     </script>

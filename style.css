@@ -358,9 +358,9 @@ a.zoomer {
 .mmg-second .overlay { background: #5dbfe1; }
 */
 
-/* Modes */ /*STYLE/remove stuff i don't want or that conflicts with timeline!*/
+/* Modes (mayneed or want)*/
 
-/* Left */
+/* Left 
 .left #header .limiter {
   width:480px;
 }
@@ -389,8 +389,8 @@ a.zoomer {
 .left .wax-legends {
   right:10px;
 }
-
-/* Hero */
+*/
+/* Hero 
 
 .hero .map {
   top:50px;
@@ -435,7 +435,7 @@ a.zoomer {
   margin-right:20px;
   text-align:center;
 }
-
+*/
 /* embed */
 
 .embed .map {

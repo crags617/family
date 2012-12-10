@@ -1,9 +1,6 @@
-<!-- <SCRIPT> from a simple timeline-->
+//<SCRIPT> from a simple timeline
   
-  <!--rename to timeline.js and then add script.js from dummy.js???-->
-
-  
-var map = mapbox.map('map');
+//var map = mapbox.map('map');
   map.addLayer(mapbox.layer().id('examples.map-20v6611k'));
 
   var timeline = document.getElementById('timeline'),

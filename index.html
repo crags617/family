@@ -42,7 +42,6 @@
 
         var main = Map('map', {
           /*MapBox API url*/
-          //api: 'http://a.tiles.mapbox.com/v3/crags617.craginfam.jsonp',
           api: 'http://a.tiles.mapbox.com/v3/crags617.map-cr2dl28j.jsonp',
           /*Intial center point and zoom level*/
             center: {           
@@ -60,8 +59,6 @@
                 'tooltips',
                 'bwdetect'
             ]
-        }, function(tilejson) { /*might not want to use this...*/
-          $('p.description').text(tilejson.description);
         });
     </script>
 </body>

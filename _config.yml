@@ -2,7 +2,7 @@ auto: true
 safe: true
 server: true
 permalink: none
-baseurl: "live-tweets-template"
+baseurl: "family"
 exclude:
  - .gitignore
  - README.md

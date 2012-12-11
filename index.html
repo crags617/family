@@ -56,7 +56,10 @@
             'tooltips',
             'bwdetect'
           ]
-        });
+        }, function(tilejson) {
+        $('p.description').text(tilejson.description);
+    });
+      
     </script>
 </body>
 </html>

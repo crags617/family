@@ -70,12 +70,12 @@ a {
     text-decoration:none;
     }
 
-#sidebar a {
+#timeline a {
   font-size:10px;
   text-decoration:none;
   }
 
-#sidebar #controls a {
+#timeline #controls a {
   font-size:20px;
   color:#DC1438;
   margin-left:10px;
@@ -125,11 +125,22 @@ body > div {
     z-index: 2; 
     }
 
-#sidebar {
+#overhang {
+  position:absolute;
+  top:0px;
+  left:0px;
+  background:#fff;
+  z-index:999;
+  overflow:auto;
+  opacity:0.6;
+  }
+#overhang:hover { opacity:1; }
+
+#timeline {
   padding:10px;
   }
 
-#sidebar #controls {
+#timeline #controls {
   position:absolute;
   top:15px;
   right:15px;

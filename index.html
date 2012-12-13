@@ -1,62 +1,40 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Weekend Picks</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>FAMILY</title>
-  <link rel="stylesheet" href="map.css" type="text/css" />
-  <link rel="stylesheet" href="style.css" type="text/css" />
-</head>
+    <link rel="stylesheet" href="http://api.tiles.mapbox.com/mapbox.js/v0.6.3/mapbox.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/mapbox.share.css" type="text/css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 
-<body>
-  <div id="header">
-    <h1>Fam</h1>
-  </div>
-  <div id="content">
-    <div id='timeline'>
-      <div id='controls'></div>
+    <script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.3/mapbox.uncompressed.js'></script>
+    <script src="ext/jquery.min.js"></script>
+    <script src="ext/mapbox.jquery.js"></script>
+    <script src="ext/mapbox.jquery.geocoder.js"></script>
+    <script src="ext/mapbox.share.js"></script>
+  </head>
+
+  <body class="right">
+    <div id="content">
+      <div class="limiter">
+        <div id="about">
+          <img style='float:left;' src='img/logo_retina.png' width='49' height'39' />
+          <h1 class='map-title'></h1>
+          <p class='description'></p>
+          <div id="markerfilters" class="clearfix section">
+            <a class="markerfilter selected" href="#all">All</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="about">
-      <h2>About this Site</h2>
-            <p>shmamily</p>
-    </div>
-  </div>
-  <div id="map" class="map"></div>
-        
-  <!-- External libraries and site script -->
-  <script src="lib/jquery.min.js"></script>
-  <script src="lib/modestmaps.min.js"></script>
-  <script src="lib/wax/wax.mm.js"></script>
-  <script src="lib/wax/wax.ext.js"></script>
-  <script src="lib/easey.js"></script>
-  <script src="lib/mmg.js"></script>
-  <script src="lib/simplestyle_factory.js"></script>
-  <script src="lib/easey.handlers.js"></script>
-  <script src="lib/mmg_interaction.js"></script>
-  <script src="script.js"></script>
-  <script src="timeline.js"></script>
-    
-    <!-- Site configuration -->
-    <script type="text/javascript">
-      
-    var main = Map('map', {
-        api: 'http://a.tiles.mapbox.com/v3/crags617.craginfam.jsonp',
-        center: {
-          lat: 40, // Intial center point and zoom level.
-          lon: 25, // To find coordinates and zoom levels,
-          zoom: 2 // try: http://www.getlatlon.com
-        },
-        zoomRange: [1, 8], // Limit zooming on the map to these levels
-        features: [ // Map features (see readme.md)
-          'zoomwheel',
-          'zoombox',
-          'zoompan',
-          'legend',
-          'tooltips',
-          'bwdetect',
-          'share'
-        ]
-      });
-  </script>
+    <div id="map" class="map"></div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>

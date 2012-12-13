@@ -6,10 +6,10 @@ var map = mapbox.map('map');
 
       map.extent(markersLayer.extent());
 
-      var year = document.getElementById('filter-food');
-      var all = document.getElementById('filter-all');
+      var tweten = document.getElementById('twenty-ten');
+      var all = document.getElementById('ever');
 
-      year.onclick = function(e) {
+      tweten.onclick = function(e) {
           all.className = '';
           this.className = 'active';
           // The filter function takes a GeoJSON feature object
@@ -22,7 +22,7 @@ var map = mapbox.map('map');
       };
 
       all.onclick = function() {
-          year.className = '';
+          tweten.className = '';
           this.className = 'active';
           markersLayer.filter(function(f) {
               return true; //shows everything

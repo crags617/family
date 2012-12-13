@@ -12,8 +12,8 @@ markerLayer.url('../../family/homesv5.geojson')
 });
 
 //create map with no handlers (no zoom/pan)
-var map = mapbox.map('map', layer, null, []); 
-//OR var map = mapbox.map('map', [layer, markerLayer], null, []); 
+var map = mapbox.map('map', base, null, []); 
+//OR var map = mapbox.map('map', [base, markerLayer], null, []); 
 
 map.centerzoom({lat: 25, lon: -43 }, 2);
 

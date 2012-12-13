@@ -32,7 +32,7 @@ $('#map').mapbox('http://a.tiles.mapbox.com/v3/crags617.craginfam.jsonp', functi
         container.find('a').removeClass('selected');
         var id = $(this).addClass('selected').attr('href').replace('#', '');
         tilejson.markers.filter(function(feature) {
-            return feature.properties['marker-symbol'] == id || id == 'all';
+            return feature.properties['start_year'] == id || id == 'all';
         });
         return false;
     }

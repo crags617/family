@@ -231,7 +231,7 @@ a.zoomer { /*try comment out-- its probably in map.share thang*/
   color:#FFF;
   }
 
-/*
+
 .wax-tooltip {
   left: 100px;
   top: 10px; 
@@ -257,7 +257,7 @@ a.zoomer { /*try comment out-- its probably in map.share thang*/
     display: block;
     margin-top: 0.5em;
 }
-*/
+
 .share {
     top: 45px;
     z-index: 1000;

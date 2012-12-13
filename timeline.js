@@ -2,10 +2,10 @@ var map = mapbox.map('map');
 map.addLayer(mapbox.layer().id('http://a.tiles.mapbox.com/v3/crags617.craginfam.jsonp'))
   .zoom(2)
   .center({lat:25,lon:-43});
-map.interaction.auto();
+map.interaction.auto(); //not working?
 map.ui.zoomer.add();
 map.setZoomRange(1,8);
-//map.smooth(true);
+map.smooth(true);
 
 /*var timeline = document.getElementById('timeline'),
     controls = document.getElementById('controls');

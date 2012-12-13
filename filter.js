@@ -1,12 +1,12 @@
 var map = mapbox.map('map');
 map.addLayer(mapbox.layer().id('http://a.tiles.mapbox.com/v3/crags617.cragin_homes_blnk.jsonp'));
 var markerLayer = mapbox.markers.layer();
-/*mapbox.markers.interaction(markerLayer);
-map.addLayer(markerLayer);
+mapbox.markers.interaction(markerLayer);
+/*map.addLayer(markerLayer);
 map.zoom(2).center({lat:25, lon:-43});*/
 
 map.addLayer(mapbox.markers.layer().markerLayer.url('http://dl.dropbox.com/u/28523686/homes_v5.geojson'));
-
+map.zoom(2).center({lat:25, lon:-43});
 //markerLayer.url('http://dl.dropbox.com/u/28523686/homes_v5.geojson');
 
 /*var markerLayer = mapbox.markers.layer().url('http://dl.dropbox.com/u/28523686/homes_v5.geojson'), function() {

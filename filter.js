@@ -6,10 +6,10 @@ map.addLayer(markerLayer);
 map.zoom(2).center({lat:25, lon:-43});
 
 markerLayer.add_feature({
-    "geometry": {
+    geometry: {
         coordinates: [-77, 37.9]
     },
-    "properties": {
+    properties: {
         'marker-color': '#000',
         'marker-symbol': 'star-stroked',
         "title": 'Example Marker',

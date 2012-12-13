@@ -4,7 +4,7 @@ map.addLayer(mapbox.layer().id('http://a.tiles.mapbox.com/v3/crags617.cragin_hom
 mapbox.markers.interaction(markerLayer);
 markerLayer.features(myobj);
 map.addLayer(markerLayer);
-map.zoom(2).center({lat:25, lon:-43});*/
+map.zoom(2).center({lat:25, lon:-43});
 
 markerLayer.add_feature({"id":"Valencia, Spain","properties":{"num_months":4,"Type":"Caroline","start_month":9,"start_year":2010,"geo_accuracy":"administrative","Location":"Valencia, Spain","geo_longitude":-0.554565424514237,"geo_latitude":39.4015242860252,"num_cragins":1},"type":"Feature","geometry":{"type":"Point","coordinates":[-0.554565424514237,39.4015242860252]}}
 );*/

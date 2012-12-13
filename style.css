@@ -191,13 +191,14 @@ body > div {
 a.zoomer {
   position: absolute;
   top: 10px;
-}  
+} 
+/*
 .wax-tooltip {
   left: 100px;
   top: 10px; 
   right: auto; 
 }
-.wax-legends { /*STYLE: make smaller, fonts included..*/
+.wax-legends { 
   left: 10px;
   bottom: 10px;
   right: auto;
@@ -217,18 +218,11 @@ a.zoomer {
     display: block;
     margin-top: 0.5em;
 }
+*/
 .share {
     top: 45px;
     z-index: 1000;
 }
-    
-.mmg-default {
-    width: 20px;
-    height: 40px;
-    background: url(../img/map.png) -120px -30px;
-    left: -10px;
-    top: -30px;
-    }
 
 /*Not Using .MMG lib, so no styles needed*/
 

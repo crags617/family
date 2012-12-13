@@ -78,6 +78,6 @@ map.extent(markerLayer.extent());
         return false;
     };
 
-});*/
+});
 map.addLayer(markerLayer);
-map.zoom(2).center({lat:25, lon:-43});
+map.zoom(2).center({lat:25, lon:-43});*/

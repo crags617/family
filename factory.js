@@ -13,7 +13,7 @@ markerLayer.url('../../family/homesv5.geojson')
 
 //add markers to map
 map.addLayer(markerLayer)
-//   .setExtent(markerLayer.extent());
+   .setExtent(markerLayer.extent());
 
 map.zoom(2).center({lat:25, lon:-43});
 

@@ -5,7 +5,7 @@ mapbox.markers.interaction(markerLayer);
 map.addLayer(markerLayer);
 map.zoom(2).center({lat:25, lon:-43});
 
-/*markerLayer.add_feature({
+markerLayer.add_feature({
     "geometry": {
         coordinates: [-77, 37.9]
     },
@@ -15,7 +15,7 @@ map.zoom(2).center({lat:25, lon:-43});
         "title": 'Example Marker',
         "description": 'This is a single marker.'
     }
-});*/
+});
 
 
 //map.addLayer(mapbox.markers.layer().markerLayer.url('http://dl.dropbox.com/u/28523686/homes_v5.geojson'));

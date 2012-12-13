@@ -1,5 +1,7 @@
-//create base layer
-var base = mapbox.layer().id('crags617.cragin_homes_blnk');
+var map = mapbox.map('map');
+map.addLayer(mapbox.layer().id('crags617.cragin_homes_blnk'));
+
+map.zoom(2).center({lat:25, lon:-43});
 
 //create marker layer
 var markerLayer = mapbox.markers.layer();
@@ -11,14 +13,11 @@ markerLayer.url('../../family/homesv5.geojson')
 	return img;
 });
 
-//create map with no handlers (no zoom/pan)
-var map = mapbox.map('map', base, null, []); 
-//OR var map = mapbox.map('map', [base, markerLayer], null, []); 
-
-map.centerzoom({lat: 25, lon: -43 }, 2);
-
+//add markers to map
 map.addLayer(markerLayer)
    .setExtent(markerLayer.extent());
+
+//map.zoom(2).center({lat:25, lon:-43});
 
 map.ui.attribution.add()
 				  .content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');

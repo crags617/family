@@ -63,8 +63,8 @@ markerLayer.features(myobj, function() {
         // The filter function takes a GeoJSON feature object
         // and returns true to show it or false to hide it.
         markerLayer.filter(function(f) {
-            return f.properties['start_year'] === '2010';
-            //return f.properties['start_year'] == 2010;
+            //return f.properties['start_year'] === '2010';
+            return f.properties["start_year"] == 2010;
         });
         return false;
     };

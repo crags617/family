@@ -1,7 +1,8 @@
 // Create and load map
 $('#map').mapbox('examples.map-zr0njcqy', function(map, tilejson) {
+//$('#map').mapbox('http://a.tiles.mapbox.com/v3/crags617.cragin_homes_blnk.jsonp', function(map, tilejson) {
 
-    map.setZoomRange(0, 15);
+    map.setZoomRange(0, 8);
 
     // Add share control
     mapbox.share().map(map).add();

@@ -153,32 +153,6 @@ body > div {
     width: 100%;
 }
 
-SECTION STYLES FROM WPT: mayneed
-.section {
-  width: 249px;
-  margin-bottom: 20px;
-  background: #ececec;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  padding: 15px;
-}
-
-LAYERS STYLES FROM WPT: mayneed
-.layers a {
-  display:block;
-  padding:5px;
-  margin:5px 0;
-  background:#eee;
-  max-width:300px;
-}
-.layers a:hover, .layers a:focus, .layers a.active {
-  background:#369;
-  color:white;
-}
-*/
-
-/*label { font-weight:700;}*/
-
 #about { 
     border-top: 1px solid #ccc;
 }
@@ -220,8 +194,8 @@ a.zoomer {
 }  
 .wax-tooltip {
   left: 100px;
-  top: 10px; /*wpt: 330px*/
-  right: auto; /*unsure || wpt: 60px*/
+  top: 10px; 
+  right: auto; 
 }
 .wax-legends { /*STYLE: make smaller, fonts included..*/
   left: 10px;
@@ -256,71 +230,7 @@ a.zoomer {
     top: -30px;
     }
 
-/*.MMG STYLES FROM ltt: 
-.mmg {
-    width: 15px;
-    height: 15px;
-    left: -7.5px;
-    top: -7.5px;
-    z-index: 3;
-    position: relative;
-    cursor: pointer;
-    }
-.mmg .overlay {
-    width: 190px;
-    font-size: 12px;
-    line-height: 18px;
-    padding: 10px;
-    border-radius: 3px;
-    color: white;
-    position: absolute;
-    bottom: 25px;
-    left: -97.5px;
-    visibility: hidden;
-    opacity: 0;
-    padding-bottom: 30px;
-    border: none;
-    z-index: 2;
-    }
-.mmg .user, .mmg .time {
-    color: #333;
-    position: absolute;
-    margin-top: 5px;
-    font-size: 11px;
-    }
-.mmg .user {
-    left: 10px;    
-    }
-.mmg .time {
-    right: 10px;
-    }
-.mmg:hover .overlay, .mmg:hover .arrow-down {
-    visibility: visible;
-    opacity: 1;
-    }
-.mmg:hover {
-    z-index: 10;
-    }
-.mmg .arrow-down {
-    width:10px;
-    height: 10px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    position: absolute;
-    bottom: 20px;
-    left: 2.5px;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1;
-    }
-.mmg-first .arrow-down { background: rgba(217,126,81,1); }
-.mmg-first .overlay { background: #d97e51; }
-.mmg-second .arrow-down { background: rgba(93,191,225,1); }
-.mmg-second .overlay { background: #5dbfe1; }
-*/
+/*Not Using .MMG lib, so no styles needed*/
 
 /* embed */
 

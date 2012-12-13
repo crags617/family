@@ -10,7 +10,7 @@
 
 <body>
   <div id="header">
-    <h1>Geographic Evolution of my family</h1>
+    <h1>Fam</h1>
   </div>
   <div id="content">
     <div id='timeline'>
@@ -18,7 +18,7 @@
     </div>
     <div id="about">
       <h2>About this Site</h2>
-            <p>Ya ya ya </p>
+            <p>shmamily</p>
     </div>
   </div>
   <div id="map" class="map"></div>
@@ -40,25 +40,7 @@
     <script type="text/javascript">
       
       // Create map
-  mapbox.auto('map', 'http://a.tiles.mapbox.com/v3/crags617.craginfam.jsonp', function(map, tiledata) {
-
-    // Replace marker factory function with our version
-    tiledata.markers.factory(function(m) {
-
-        // Create a marker using the simplestyle factory
-        var elem = mapbox.markers.simplestyle_factory(m);
-
-        // Add function that centers marker on click
-        MM.addEvent(elem, 'click', function(e) {
-            map.ease.location({
-              lat: m.geometry.coordinates[1],
-              lon: m.geometry.coordinates[0]
-            }).zoom(map.zoom()).optimal();
-        });
-
-        return elem;
-    });
-  });
+  	var main = mapbox.auto('map', 'http://a.tiles.mapbox.com/v3/crags617.craginfam.jsonp');
       
       /*var timeline = document.getElementById('timeline'),
           controls = document.getElementById('controls');

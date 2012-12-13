@@ -27,7 +27,7 @@ markerLayer.url('http://dl.dropbox.com/u/28523686/homes_v5.geojson', function (e
       }
     });
   else
-    markers.add_feature(features[1]);
+    markers.add_feature(features[5]);
 });
 //map.addLayer(markerLayer);?
       //markerLayer.url('http://dl.dropbox.com/u/28523686/homes_v5.geojson');

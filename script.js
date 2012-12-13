@@ -1,28 +1,25 @@
 // Create and load map
-$('#map').mapbox('examples.map-zr0njcqy', function(map, tilejson) {
-//$('#map').mapbox('http://a.tiles.mapbox.com/v3/crags617.cragin_homes_blnk.jsonp', function(map, tilejson) {
+$('#map').mapbox('http://a.tiles.mapbox.com/v3/crags617.craginfam.jsonp', function(map, tilejson) {
 
     map.setZoomRange(0, 8);
 
     // Add share control
     mapbox.share().map(map).add();
 
-    // Set title and description from tilejson
-    document.title = tilejson.name;
-    $('h1.map-title').text(tilejson.name);
+    // Get description from tilejson
     $('p.description').text(tilejson.description);
 
 
     var container = $('#markerfilters');
-    $.each(tilejson.markers.markers(), function(index, m) {
-        var s = m.data.properties['marker-symbol'];
+    $.each(tilejson.markers.markers(), function(index, homes) {
+        var y = m.data.properties['start_year'];
 
-        if (container.find('[href="#' + s + '"]').length) return;
+        if (container.find('[href="#' + y + '"]').length) return;
 
         var el = $(document.createElement('a'))
             .addClass('markerfilter')
-            .attr('href', '#' + s)
-            .css('background-image', 'url(http://a.tiles.mapbox.com/v3/marker/pin-l-'+s+'+000000.png)')
+            .attr('href', '#' + y)
+            .css('background-image', 'url(http://dl.dropbox.com/u/28523686/rHouse-24.png)')
             .bind('click', filter);
         container.append(el);
     });

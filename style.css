@@ -188,10 +188,49 @@ body > div {
 
 /* Map: zoomer, wax, mmg.. */   
 
-a.zoomer {
+a.zoomer { /*try comment out-- its probably in map.share thang*/
   position: absolute;
   top: 10px;
 } 
+
+/*Simple Filtering*/
+#simple-filter-ui {
+  position:absolute;
+  top:10px;left:10px;
+  z-index:100;
+}
+#simple-filter-ui ul {
+  list-style:none;
+  margin:0;padding:0;
+}
+#simple-filter-ui a {
+  font-size:13px;
+  background:#FFF;
+  color:#3C4E5A;
+  display:block;
+  margin:0;padding:0;
+  border:1px solid #BBB;
+  border-bottom-width:0;
+  min-width:138px;
+  padding:10px;
+  text-decoration:none;
+}
+#simple-filter-ui a:hover { background:#ECF5FA; }
+#simple-filter-ui li:last-child a {
+  border-bottom-width:1px;
+  -webkit-border-radius:0 0 3px 3px;
+          border-radius:0 0 3px 3px;
+}
+#simple-filter-ui li:first-child a {
+  -webkit-border-radius:3px 3px 0 0;
+          border-radius:3px 3px 0 0;
+  }
+#simple-filter-ui a.active {
+  background:#3887BE;
+  border-color:#3887BE;
+  color:#FFF;
+  }
+
 /*
 .wax-tooltip {
   left: 100px;

@@ -2,7 +2,7 @@ var map = mapbox.map('map');
 
   map.addLayer(mapbox.layer().id('http://a.tiles.mapbox.com/v3/crags617.cragin_homes_blnk.jsonp'));
 
-  var markersLayer = mapbox.markers.layer().url('http://dl.dropbox.com/u/28523686/homes_v5.geojson', function() {
+  var markersLayer = mapbox.markers.layer().url('http://dl.dropbox.com/u/28523686/homes_v5.geojson'), function() {
 
       map.extent(markersLayer.extent());
 

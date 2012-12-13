@@ -154,10 +154,10 @@ body > div {
 }
 
 .marker-image {
-	position:absolute;
     margin-left:-12px;
     margin-top:-12px;
     pointer-events:all;
+  	position:absolute;
 }
 
 

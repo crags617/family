@@ -52,7 +52,7 @@ var markerLayer = mapbox.markers.layer();
 mapbox.markers.interaction(markerLayer);
 markerLayer.features(myobj, function() {
 
-    map.extent(markerLayer.extent());
+    //map.extent(markerLayer.extent());
 
     var tweten = document.getElementById('twenty-ten');
     var all = document.getElementById('ever');

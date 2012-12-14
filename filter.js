@@ -23,7 +23,7 @@ var markersLayer = mapbox.markers.layer().url('../../family/homesv5.geojson', fu
           // The filter function takes a GeoJSON feature object
           // and returns true to show it or false to hide it.
           markersLayer.filter(function(f) {
-              return f.properties['start_year'] === '2010';
+              return f.properties['start_year'] === 2010;
               //OR return f.properties['start_year'] == 2010; //look up
           });
           return false;

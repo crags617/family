@@ -8,14 +8,11 @@ var timeline = document.getElementById('timeline'),
 
 var markerLayer = mapbox.markers.layer()
     
-    // this is a quick optimization - otherwise all markers are briefly displayed
-    // before filtering to 2001
+    // hide all markers before filtering
     .filter(function() { return false })
     .url('../../family/homesv5.geojson', function(err, features) {
 
-        // A closure for clicking years. You give it a year, and it returns a function
-        // that, when run, clicks that year. It's this way in order to be used as both an
-        // event handler and run manually.
+        // closure for clicking years
         function click_year(y) {
             return function() {
                 var active = document.getElementsByClassName('year-active');
@@ -28,7 +25,7 @@ var markerLayer = mapbox.markers.layer()
             };
         }
     
-        var years = {},
+        /*var years = {},
             yearlist = [],
             year_links = [];
     
@@ -45,7 +42,31 @@ var markerLayer = mapbox.markers.layer()
             a.id = 'y' + yearlist[i];
             a.href = '#';
             a.onclick = click_year(yearlist[i]);
+        }*/
+      
+              //find earliest data year to include:
+        var first = features[0].properties.start_year,
+            other = 2012,
+            years = {};
+        
+        for (var i = 0; i < features.length; i++) {
+            other = features[i].properties.start_year;
+            if (first > other) first = other;
+            years[other] = true;
         }
+        
+        //find current/latest year:
+        other = new Date().getFullYear();
+        
+        //make timeline:
+        for (var y = first; y< in years; y++) {
+            var a = timeline.appendChild(document.createElement('a'));
+             a.innerHTML = yearlist[i] + ' ';
+             a.id = 'y' + yearlist[i];
+             a.href = '#';
+             a.onclick = click_year(yearlist[i]);
+        }
+
     
         var play = controls.appendChild(document.createElement('a')),
             stop = controls.appendChild(document.createElement('a')),
@@ -61,14 +82,14 @@ var markerLayer = mapbox.markers.layer()
             var step = 0;
             playStep = window.setInterval(function() {
                 if (step < yearlist.length) {
-                    // Increment year every 750ms.
+                    // Increment year every 500ms.
                     click_year(yearlist[step])();
                     step++;
                 } else {
                     // Stop animation at end of yearlist.
                     window.clearInterval(playStep);
                 }
-            }, 750);
+            }, 500);
         };
     
         stop.onclick = function() {

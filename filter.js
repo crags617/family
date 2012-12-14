@@ -1,11 +1,11 @@
-/*var map = mapbox.map('map');
-map.addLayer(mapbox.layer().id('crags617.cragin_homes_blnk'));*/
 var map = mapbox.map('map', mapbox.layer().id('crags617.cragin_homes_blnk'));
 
-var markerLayer = mapbox.markers.layer();
+/*var markerLayer = mapbox.markers.layer();
 markerLayer.url('../../family/homesv5.geojson');
 
-map.addLayer(markerLayer);
+map.addLayer(markerLayer);*/
+
+map.addLayer(mapbox.markers.layer().url('../../family/homesv5.geojson'));
 
 map.zoom(2).center({lat:25, lon:-43});
 

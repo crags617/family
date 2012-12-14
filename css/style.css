@@ -137,12 +137,11 @@ header {
   padding:10px;
   }
 
-#timeline #controls {
+/* #timeline #controls {
   position:absolute;
   top:15px;
   right:15px;
-  margin-bottom:0;
-  }
+  }*/
 
 .map {
     position: absolute;
@@ -158,7 +157,7 @@ header {
   	position:absolute;
 }
 
-#about h3 { 
+#about h2, #soon h2 { 
     border-bottom: 1px solid #bbb;
 }
 

@@ -1,5 +1,5 @@
 var map = mapbox.map('map');
-map.addLayer(mapbox.layer().id('cragin_homes_blnk'));
+map.addLayer(mapbox.layer().id('crags617.cragin_homes_blnk'));
 
 var timeline = document.getElementById('timeline'),
     controls = document.getElementById('controls');

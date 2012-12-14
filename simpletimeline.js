@@ -2,7 +2,8 @@ var map = mapbox.map('map');
 map.addLayer(mapbox.layer().id('crags617.cragin_homes_blnk'));
 map.ui.zoomer.add();
 map.ui.zoombox.add();
-map.centerzoom({ lat: 25, lon: -43 }, 2).setZoomRange(1, 8);
+//map.centerzoom({ lat: 25, lon: -43 }, 2).setZoomRange(1, 8);
+map.centerzoom({ lat: 38, lon: -47 }, 5).setZoomRange(1, 8);
 var timeline = document.getElementById('timeline'),
     controls = document.getElementById('controls');
 
@@ -86,6 +87,7 @@ var markerLayer = mapbox.markers.layer()
             playStep = window.setInterval(function() {
             //Only click (to re-filter) important yrs, & stop animation current year.
                 if (step <= current) {
+                  if (step === 2003) map.extent(markerLayer.extent());
                   if (importantyears[step]) click_year(step)();
                   step++;
                 } else {

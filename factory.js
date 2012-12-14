@@ -7,7 +7,7 @@ markerLayer.url('../../family/homesv5.geojson')
 		   .factory( function(homes) {
 	var img = document.createElement('img');
 	img.className = '.marker-image';
-	img.setAttribute('src', 'http://dl.dropbox.com/u/28523686/mHouse-24.png');
+	img.setAttribute('src', 'http://dl.dropbox.com/u/28523686/mHouse-18.png');
 	return img;
 });
 

@@ -154,12 +154,11 @@ body > div {
 }
 
 .marker-image {
-    margin-left:-12px;
-    margin-top:-12px;
+    margin-left:-2px;
+    margin-top:-2px;
     pointer-events:all;
   	position:absolute;
 }
-
 
 #about { 
     border-top: 1px solid #ccc;

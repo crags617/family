@@ -82,12 +82,9 @@ var markerLayer = mapbox.markers.layer()
         stop.innerHTML = 'STOP ■';
         stop.href='#';
     
-      	var count = 0;
         play.onclick = function() {
             var step = first;
             playStep = window.setInterval(function() {
-            //zoom out every decade:
-              
             //Only click (to re-filter) important yrs, & stop animation current year.
                 if (step <= current) {
                   if (step === 2003) map.extent(markerLayer.extent());

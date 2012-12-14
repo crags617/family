@@ -46,34 +46,35 @@ var markerLayer = mapbox.markers.layer()
         a.onclick = click_year(yearlist[i]);
     }
 
-    var stop = controls.appendChild(document.createElement('a')),
-          play = controls.appendChild(document.createElement('a')),
-          playStep;
-
-    stop.innerHTML = 'STOP ■';
+    var play = controls.appendChild(document.createElement('a')),
+        stop = controls.appendChild(document.createElement('a')),
+        playStep;
+        
     play.innerHTML = 'PLAY ▶';
+    play.href='#';
+    stop.innerHTML = 'STOP ■';
+    stop.href='#';
+    
 
     play.onclick = function() {
         var step = 0;
-        // Every quarter-second (250 ms) increment the year
-        // we're looking at and show a new year. When
-        // the end is reached, call clearInterval to stop
-        // the animation.
         playStep = window.setInterval(function() {
             if (step < yearlist.length) {
+                // Increment year every 750ms.
                 click_year(yearlist[step])();
                 step++;
             } else {
+                // Stop animation at end of yearlist.
                 window.clearInterval(playStep);
             }
-        }, 250);
+        }, 750);
     };
 
     stop.onclick = function() {
         window.clearInterval(playStep);
     };
 
-    click_year(2010)();
+    click_year(1990)();
 });
 
 map.addLayer(markerLayer);

@@ -1,5 +1,6 @@
-var map = mapbox.map('map');
-map.addLayer(mapbox.layer().id('crags617.cragin_homes_blnk'));
+/*var map = mapbox.map('map');
+map.addLayer(mapbox.layer().id('crags617.cragin_homes_blnk'));*/
+var map = mapbox.map('map', mapbox.layer().id('crags617.cragin_homes_blnk'));
 
 var markerLayer = mapbox.markers.layer();
 markerLayer.url('../../family/homesv5.geojson');

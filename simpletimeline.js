@@ -64,9 +64,10 @@ var markerLayer = mapbox.markers.layer()
             var a = timeline.appendChild(document.createElement('a'));
             a.innerHTML = y + ' ';
             a.id = 'y' + y;
-          	//only link to important years
+          	
+          	//only allow clicks on important years
           	if (importantyears[y]) {
-            	a.href = '#';
+              	a.href = '#';
             	a.onclick = click_year(y);
             }
         }
@@ -84,13 +85,13 @@ var markerLayer = mapbox.markers.layer()
             var step = first;
             playStep = window.setInterval(function() {
             //Only click (to re-filter) important yrs, & stop animation current year.
-                if (step < current) {
+                if (step <= current) {
                   if (importantyears[step]) click_year(step)();
                   step++;
                 } else {
                     window.clearInterval(playStep);
                 }
-            }, 300);
+            }, 200);
         };
     
         stop.onclick = function() {

@@ -52,37 +52,44 @@ table {
 body,
 input,
 textarea { /*STYLE*/
-    font: 16px/24px 'DroidSerifRegular', sans-serif;
-    color: #333; 
+    font-family: 'Open Sans Condensed', sans-serif;
+  	font-size: 16px;
+  	font-weight: 300;
+    color: #888; 
     -webkit-font-smoothing: antialiased;
     }
 
 pre,
 code { font:normal 12px/20px monospace; }
-    
+
 h1, h2, h3, h4, h5, h6 {
-    font: .75em/1em 'DroidSansBold', sans-serif;
+    font-size: 18px;
+  	font-weight: 700;
     text-transform: uppercase;
 }
 
+#header h1 {
+  	font-size: 24px;
+}
+
 a { 
-    color:#369; 
+    color:#D8005F; 
     text-decoration:none;
     }
 
 #timeline a {
-  font-size:10px;
+  font-size:14px;
   text-decoration:none;
   }
 
 #timeline #controls a {
-  font-size:20px;
-  color:#DC1438;
+  font-size:24px;
+  color:#FFD140;
   margin-left:10px;
   }
 
 a.year-active {
-  color:#DC1438;
+  color:#FFD140;
   }
 
 /* Layout */
@@ -107,8 +114,8 @@ body > div {
     right: 0px;
     width: 320px;
     height: 50px;	
-    background: #444;
-    color: white;
+    background: #48001f;
+    color: #e4e4e4;
     }
 
 #content {
@@ -118,23 +125,14 @@ body > div {
 	bottom: 0px;
 	padding: 0 20px; 
 	width: 279px;
-    background: rgb(255,255,255); /* old IE */
-    background: rgba(255,255,255,.9);
-    border-left: 1px solid #ccc;
+    /*background: rgb(255,255,255);
+    background: rgba(255,255,255,.9);*/
+  	background: #8C003D;
+    color: #e4e4e4
+    border-left: 1px solid #bbb;
     overflow-x: auto; 
     z-index: 2; 
     }
-
-#overhang {
-  position:absolute;
-  top:0px;
-  left:0px;
-  background:#fff;
-  z-index:999;
-  overflow:auto;
-  opacity:0.6;
-  }
-#overhang:hover { opacity:1; }
 
 #timeline {
   padding:10px;
@@ -154,14 +152,14 @@ body > div {
 }
 
 .marker-image {
-    /*margin-left:-2px;
-    margin-top:-2px;
-    pointer-events:all;*/
+    margin-left:-9px;
+    margin-top:-9px;
+    pointer-events:all;
   	position:absolute;
 }
 
 #about { 
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #bbb;
 }
 
 /*Mode: Heroine */

@@ -59,7 +59,7 @@ var markerLayer = mapbox.markers.layer()
         other = new Date().getFullYear();
         
         //make timeline:
-        for (var y = first; y< in years; y++) {
+        for (var y = first; y <= other; y++) {
             var a = timeline.appendChild(document.createElement('a'));
              a.innerHTML = yearlist[i] + ' ';
              a.id = 'y' + yearlist[i];

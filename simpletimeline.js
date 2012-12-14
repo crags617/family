@@ -3,7 +3,7 @@ map.addLayer(mapbox.layer().id('crags617.cragin_homes_blnk'));
 map.ui.zoomer.add();
 map.ui.zoombox.add();
 //map.centerzoom({ lat: 25, lon: -43 }, 2).setZoomRange(1, 8);
-map.centerzoom({ lat: 25, lon: -47 }, 4).setZoomRange(1, 8);
+map.centerzoom({ lat: 40, lon: -83 }, 4).setZoomRange(1, 8);
 var timeline = document.getElementById('timeline'),
     controls = document.getElementById('controls');
 

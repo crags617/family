@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
 
-#header h1 {
+h1 {
   	font-size: 24px;
 }
 
@@ -85,7 +85,7 @@ a {
 #timeline #controls a {
   font-size:24px;
   color:#FFD140;
-  margin-left:10px;
+  margin-top:10px;
   }
 
 a.year-active {
@@ -101,22 +101,23 @@ h1, h2 {
 
 p {
     margin-bottom: 20px;
-    }
+}
 
 body > div {
     position: relative;
     z-index: 1;
-    }
+}
 
-#header {
+header {
     position: absolute;
     top: 0px;
     right: 0px;
     width: 320px;
-    height: 50px;	
+    height: 50px;
+  	left: auto;
     background: #48001f;
-    color: #e4e4e4;
-    }
+    color: #fff;
+}
 
 #content {
 	position: absolute;
@@ -128,7 +129,7 @@ body > div {
     /*background: rgb(255,255,255);
     background: rgba(255,255,255,.9);*/
   	background: #8C003D;
-    color: #e4e4e4
+    color: #fff
     border-left: 1px solid #bbb;
     overflow-x: auto; 
     z-index: 2; 
@@ -193,7 +194,7 @@ body > div {
 
 /* Map: zoomer, wax, mmg.. */   
 
-a.zoomer { /*try comment out-- its probably in map.share thang*/
+a.zoomer {
   position: absolute;
   top: 10px;
 } 
@@ -268,8 +269,6 @@ a.zoomer { /*try comment out-- its probably in map.share thang*/
     z-index: 1000;
 }
 
-/*Not Using .MMG lib, so no styles needed*/
-
 /* embed */
 
 .embed .map {
@@ -314,11 +313,6 @@ a.zoomer { /*try comment out-- its probably in map.share thang*/
     text-align: center;
     border: 1px solid #ccc;
     }
-
-/* EMBED SHARING STYLE from ltt: mayneed
-.embed.sharing .layers {
-    visibility: hidden;
-}
 
 /* Animation */
 

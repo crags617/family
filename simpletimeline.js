@@ -44,15 +44,16 @@ var markerLayer = mapbox.markers.layer()
             a.onclick = click_year(yearlist[i]);
         }*/
       
-              //find earliest data year to include:
+        //find earliest year to include:
+      
         var first = features[0].properties.start_year,
             current = 2012,
-            years = {};
-        
+            importantyears = {};
+      
         for (var i = 0; i < features.length; i++) {
             current = features[i].properties.start_year;
             if (first > current) first = current;
-            years[current] = true;
+            importantyears[current] = true;
         }
         
         //find current/latest year:
@@ -61,13 +62,15 @@ var markerLayer = mapbox.markers.layer()
         //make timeline:
         for (var y = first; y <= current; y++) {
             var a = timeline.appendChild(document.createElement('a'));
-             a.innerHTML = y + ' ';
-             a.id = 'y' + y;
-             a.href = '#';
-             a.onclick = click_year(y);
+            a.innerHTML = y + ' ';
+            a.id = 'y' + y;
+          	//only link to important years
+          	if (importantyears[y]) {
+            	a.href = '#';
+            	a.onclick = click_year(y);
+            }
         }
 
-    
         var play = controls.appendChild(document.createElement('a')),
             stop = controls.appendChild(document.createElement('a')),
             playStep;
@@ -76,20 +79,14 @@ var markerLayer = mapbox.markers.layer()
         play.href='#';
         stop.innerHTML = 'STOP ■';
         stop.href='#';
-        
     
         play.onclick = function() {
             var step = first;
             playStep = window.setInterval(function() {
-            //Only click (to re-filter) start_years, and stop animation current year.
+            //Only click (to re-filter) important yrs, & stop animation current year.
                 if (step < current) {
-                  if (years[step]) click_year(step)();
-                  else {
-                    var active = document.getElementsByClassName('year-active');
-                	if (active.length) active[0].className = '';
-                	document.getElementById('y' + y).className = 'year-active';
-                  }
-                    step++;
+                  if (importantyears[step]) click_year(step)();
+                  step++;
                 } else {
                     window.clearInterval(playStep);
                 }

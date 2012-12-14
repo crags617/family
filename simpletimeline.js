@@ -1,5 +1,5 @@
 var map = mapbox.map('map');
-map.addLayer(mapbox.layer().id('cragin_homes_blnk.jsonp'));
+map.addLayer(mapbox.layer().id('cragin_homes_blnk'));
 
 var timeline = document.getElementById('timeline'),
     controls = document.getElementById('controls');

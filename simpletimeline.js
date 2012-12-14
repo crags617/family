@@ -79,11 +79,11 @@ var markerLayer = mapbox.markers.layer()
         
     
         play.onclick = function() {
-            var step = 0;
+            var step = first;
             playStep = window.setInterval(function() {
             //Only click (to re-filter) start_years, and stop animation current year.
                 if (step < current) {
-                  if (years[y]) click_year(yearlist[step])();
+                  if (years[step]) click_year(step)();
                   else {
                     var active = document.getElementsByClassName('year-active');
                 	if (active.length) active[0].className = '';

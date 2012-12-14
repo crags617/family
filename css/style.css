@@ -158,8 +158,15 @@ header {
   	position:absolute;
 }
 
-#about { 
-    border-top: 1px solid #bbb;
+#about h3 { 
+    border-bottom: 1px solid #bbb;
+}
+
+#soon {
+  color: #ccc;
+}
+#soon h3 {
+  font-style: italic;
 }
 
 /*Mode: Heroine */

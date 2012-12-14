@@ -61,10 +61,10 @@ var markerLayer = mapbox.markers.layer()
         //make timeline:
         for (var y = first; y <= other; y++) {
             var a = timeline.appendChild(document.createElement('a'));
-             a.innerHTML = yearlist[i] + ' ';
-             a.id = 'y' + yearlist[i];
+             a.innerHTML = y + ' ';
+             a.id = 'y' + y;
              a.href = '#';
-             a.onclick = click_year(yearlist[i]);
+             a.onclick = click_year(y);
         }
 
     

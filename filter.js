@@ -3,9 +3,9 @@ var map = mapbox.map('map', mapbox.layer().id('crags617.cragin_homes_blnk'));
 /*var markerLayer = mapbox.markers.layer().url('../../family/homesv5.geojson');
 map.addLayer(markerLayer);*/
 
-map.addLayer(mapbox.markers.layer().url('../../family/homesv5.geojson'));
+//map.addLayer(mapbox.markers.layer().url('../../family/homesv5.geojson'));
 
-var markersLayer =mapbox.markers.layer().url('../../family/homesv5.geojson', function() {
+var markersLayer = mapbox.markers.layer().url('../../family/homesv5.geojson', function() {
 
       // This code is in the second callback to id because it depends
       // on the features being loaded asynchronously. If it were put right
@@ -13,7 +13,6 @@ var markersLayer =mapbox.markers.layer().url('../../family/homesv5.geojson', fun
       // data - it would still be on its way from MapBox to the browser.
 
       // Cinch the map display to show all markers
-      map.extent(markersLayer.extent());
 
       var tweten = document.getElementById('twenty-ten');
       var all = document.getElementById('ever');

@@ -81,14 +81,19 @@ var markerLayer = mapbox.markers.layer()
         play.onclick = function() {
             var step = 0;
             playStep = window.setInterval(function() {
-            //Only click start_years, and stop animation current year.
+            //Only click (to re-filter) start_years, and stop animation current year.
                 if (step < current) {
-                  	if (years[y]) click_year(yearlist[step])();
+                  if (years[y]) click_year(yearlist[step])();
+                  else {
+                    var active = document.getElementsByClassName('year-active');
+                	if (active.length) active[0].className = '';
+                	document.getElementById('y' + y).className = 'year-active';
+                  }
                     step++;
                 } else {
                     window.clearInterval(playStep);
                 }
-            }, 500);
+            }, 300);
         };
     
         stop.onclick = function() {

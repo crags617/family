@@ -19,7 +19,7 @@ var markerLayer = mapbox.markers.layer()
             if (active.length) active[0].className = '';
             document.getElementById('y' + y).className = 'year-active';
             markerLayer.filter(function(f) {
-                return f.properties.year == y;
+                return f.properties.start_year == y;
             });
             return false;
         };

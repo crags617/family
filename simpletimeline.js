@@ -46,17 +46,17 @@ var markerLayer = mapbox.markers.layer()
       
               //find earliest data year to include:
         var first = features[0].properties.start_year,
-            other = 2012,
+            current = 2012,
             years = {};
         
         for (var i = 0; i < features.length; i++) {
-            other = features[i].properties.start_year;
-            if (first > other) first = other;
-            years[other] = true;
+            current = features[i].properties.start_year;
+            if (first > current) first = current;
+            years[current] = true;
         }
         
         //find current/latest year:
-        other = new Date().getFullYear();
+        current = new Date().getFullYear();
         
         //make timeline:
         for (var y = first; y <= other; y++) {
@@ -81,12 +81,11 @@ var markerLayer = mapbox.markers.layer()
         play.onclick = function() {
             var step = 0;
             playStep = window.setInterval(function() {
-                if (step < yearlist.length) {
-                    // Increment year every 500ms.
-                    click_year(yearlist[step])();
+            //Only click start_years, and stop animation current year.
+                if (step < current) {
+                  	if (years[y]) click_year(yearlist[step])();
                     step++;
                 } else {
-                    // Stop animation at end of yearlist.
                     window.clearInterval(playStep);
                 }
             }, 500);

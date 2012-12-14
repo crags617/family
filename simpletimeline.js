@@ -8,7 +8,7 @@ var markerLayer = mapbox.markers.layer()
     // this is a quick optimization - otherwise all markers are briefly displayed
     // before filtering to 2001
     .filter(function() { return false })
-    .url('../../family/homes_v5.geojson', function(err, features) {
+    .url('../../family/homesv5.geojson', function(err, features) {
 
     // A closure for clicking years. You give it a year, and it returns a function
     // that, when run, clicks that year. It's this way in order to be used as both an

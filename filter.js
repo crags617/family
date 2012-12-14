@@ -13,7 +13,7 @@ var markersLayer =mapbox.markers.layer().url('../../family/homesv5.geojson', fun
       // data - it would still be on its way from MapBox to the browser.
 
       // Cinch the map display to show all markers
-      //map.extent(markersLayer.extent());
+      map.extent(markersLayer.extent());
 
       var tweten = document.getElementById('twenty-ten');
       var all = document.getElementById('ever');

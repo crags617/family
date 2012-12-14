@@ -1,9 +1,11 @@
+//May want to implement Ease features for zooming.
+
 var map = mapbox.map('map');
 map.addLayer(mapbox.layer().id('crags617.cragin_homes_blnk'));
 map.ui.zoomer.add();
 map.ui.zoombox.add();
-//map.centerzoom({ lat: 25, lon: -43 }, 2).setZoomRange(1, 8);
-map.centerzoom({ lat: 40, lon: -83 }, 5).setZoomRange(1, 8);
+map.centerzoom({ lat: 25, lon: -43 }, 2).setZoomRange(1, 8);
+//map.centerzoom({ lat: 40, lon: -83 }, 4).setZoomRange(1, 8);
 var timeline = document.getElementById('timeline'),
     controls = document.getElementById('controls');
 
@@ -25,25 +27,6 @@ var markerLayer = mapbox.markers.layer()
                 return false;
             };
         }
-    
-        /*var years = {},
-            yearlist = [],
-            year_links = [];
-    
-        for (var i = 0; i < features.length; i++) {
-            years[features[i].properties.start_year] = true;
-        }
-    
-        for (var y in years) yearlist.push(y);
-        yearlist.sort();
-    
-        for (var i = 0; i < yearlist.length; i++) {
-            var a = timeline.appendChild(document.createElement('a'));
-            a.innerHTML = yearlist[i] + ' ';
-            a.id = 'y' + yearlist[i];
-            a.href = '#';
-            a.onclick = click_year(yearlist[i]);
-        }*/
       
         //find earliest year to include:
       
@@ -83,6 +66,7 @@ var markerLayer = mapbox.markers.layer()
         stop.href='#';
     
         play.onclick = function() {
+          	map.centerzoom({ lat: 40, lon: -83 }, 4);
             var step = first;
             playStep = window.setInterval(function() {
             //Only click (to re-filter) important yrs, & stop animation current year.
@@ -99,6 +83,7 @@ var markerLayer = mapbox.markers.layer()
     
         stop.onclick = function() {
             window.clearInterval(playStep);
+          	map.centerzoom({ lat: 25, lon: -43 }, 2);
         };
     
         click_year(1990)();

@@ -14,7 +14,7 @@ markerLayer.url('../../family/homesv5.geojson')
 //add markers to map
 map.addLayer(markerLayer)
    .zoom(2).center({lat:25, lon:-43})
-   .setExtent(markerLayer.extent());
+//   .setExtent(markerLayer.extent());
 
 map.ui.attribution.add()
 				  .content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');

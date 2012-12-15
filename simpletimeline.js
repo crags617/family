@@ -16,7 +16,7 @@ var markerLayer = mapbox.markers.layer()
     .url('../../family/homesv5.geojson', function(err, features) {
 
       //Set standard delay between clicks (in ms)
-      	var delay = 250;
+      	var delay = 500;
       
         // closure for clicking years
         function click_year(y) {
@@ -25,7 +25,7 @@ var markerLayer = mapbox.markers.layer()
                 if (active.length) active[0].className = '';
                 document.getElementById('y' + y).className = 'year-active';
               	//Reset delay to 250:
-              	delay = 250;
+              	delay = 500;
                 markerLayer.filter(function(f) {
                     return f.properties.start_year == y;
                 });
@@ -94,7 +94,7 @@ var markerLayer = mapbox.markers.layer()
                 if (step === 2003) map.centerzoom({ lat: 25, lon: -43 }, 2, true);
                 //Only re-filter map for important years:
                 if (importantyears[step]) click_year(step)();
-                else delay=100;
+                else delay=50;
                 step++;
                 count++;
               } else {

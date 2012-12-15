@@ -98,6 +98,12 @@ var markerLayer = mapbox.markers.layer()
 
 map.addLayer(markerLayer);
 
+/*ACTIVATE STANDARD VIEW*/
+jQuery("standard").click( function () {
+  map.addLayer(mapbox.layer().id('crags617.craginfam');
+	mapbox.interaction().map(map).auto();
+});
+
 // Attribute map
 map.ui.attribution.add()
     .content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');

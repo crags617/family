@@ -16,7 +16,7 @@ var markerLayer = mapbox.markers.layer()
     .url('../../family/homesv5.geojson', function(err, features) {
 
       //Set standard delay between clicks (in ms)
-      	var delay = 500;
+      	var delay = 350;
       
         // closure for clicking years
         function click_year(y) {
@@ -24,8 +24,8 @@ var markerLayer = mapbox.markers.layer()
                 var active = document.getElementsByClassName('year-active');
                 if (active.length) active[0].className = '';
                 document.getElementById('y' + y).className = 'year-active';
-              	//Reset delay to 250:
-              	delay = 500;
+              	//Reset delay so scaled to longer delay between important years:
+              	delay = 350;
                 markerLayer.filter(function(f) {
                     return f.properties.start_year == y;
                 });
@@ -89,16 +89,16 @@ var markerLayer = mapbox.markers.layer()
               map.centerzoom({ lat: 40, lon: -83 }, 4, true);
               var step = first;
               playStep = window.setInterval(function() {
-              if (step <= current) {
-                if (step === 2003) map.centerzoom({ lat: 25, lon: -43 }, 2, true);
-                //Only re-filter map for important years:
-                if (importantyears[step]) click_year(step)();
-                else delay=50;
-                step++;
-              } else {
-              //Stop animation at last year listed:
-                  window.clearInterval(playStep);
-              }
+                if (step <= current) {
+                  if (step === 2003) map.centerzoom({ lat: 25, lon: -43 }, 2, true);
+                  //Only re-filter map for important years:
+                  if (importantyears[step]) click_year(step)();
+                  else delay=50;
+                  step++;
+                } else {
+                //Stop animation at last year listed:
+                    window.clearInterval(playStep);
+                }
               }, delay);
           };
     

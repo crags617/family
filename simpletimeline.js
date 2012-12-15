@@ -91,7 +91,7 @@ var markerLayer = mapbox.markers.layer()
               var step = first;
               playStep = window.setInterval(function() {
               if (step <= current) {
-                if (step === 2003) map.centerzoom({ lat: 25, lon: -43 }, 2, animate);
+                if (step === 2003) map.centerzoom({ lat: 25, lon: -43 }, 2, true);
                 //Only re-filter map for important years:
                 if (importantyears[step]) click_year(step)();
                 else delay=100;

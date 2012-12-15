@@ -64,18 +64,13 @@ var markerLayer = mapbox.markers.layer()
         stop.innerHTML = 'STOP ■';
         stop.href='#';
     	
-      //Set delay between auto-clicks
-      	var delay = 250;
-      
         play.onclick = function() {
               map.centerzoom({ lat: 40, lon: -83 }, 4, true);
               var step = first;
               playStep = window.setInterval(function() {
                 if (step <= current) {
-                  if (step === 2003) {
-                    map.centerzoom({ lat: 25, lon: -43 }, 2, true);
-                    delay = 1000;
-                  }
+                  if (step === 2003) map.centerzoom({ lat: 25, lon: -43 }, 2, true);
+                  
                   //Only re-filter map for important years:
                   if (importantyears[step]) click_year(step)();
                   step++;
@@ -84,7 +79,7 @@ var markerLayer = mapbox.markers.layer()
                 //Stop animation at last year listed:
                     window.clearInterval(playStep);
                 }
-              }, delay);
+              }, 250);
           };
     
         stop.onclick = function() {

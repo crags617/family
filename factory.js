@@ -1,3 +1,5 @@
+//TO DO: edit so that home sizes change just like in standard view layer
+
 var map = mapbox.map('map');
 map.addLayer(mapbox.layer().id('crags617.cragin_homes_blnk'));
 

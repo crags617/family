@@ -100,7 +100,7 @@ map.addLayer(markerLayer);
 
 /*ACTIVATE STANDARD VIEW*/
 jQuery("standard").click( function () {
-  map.addLayer(mapbox.layer().id('crags617.craginfam');
+	map.addLayer(mapbox.layer().id('crags617.craginfam'));
 	mapbox.interaction().map(map).auto();
 });
 

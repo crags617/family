@@ -79,7 +79,6 @@ var markerLayer = mapbox.markers.layer()
                   if (step === 2003) map.centerzoom({ lat: 25, lon: -43 }, 2);
                   if (importantyears[step]) click_year(step)();
                   step++;
-                  count++;
                 } else {
                     window.clearInterval(playStep);
                 }
@@ -96,7 +95,6 @@ var markerLayer = mapbox.markers.layer()
                 if (importantyears[step]) click_year(step)();
                 else delay=50;
                 step++;
-                count++;
               } else {
               //Stop animation at last year listed:
                   window.clearInterval(playStep);

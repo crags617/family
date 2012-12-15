@@ -109,7 +109,7 @@ var markerLayer = mapbox.markers.layer()
           	map.centerzoom({ lat: 25, lon: -43 }, 2);
         };
     
-        click_year(1990)();
+        click_year(1952)();
     })
     .factory(function(f) {
         var img = document.createElement('img');

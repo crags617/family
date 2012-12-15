@@ -8,7 +8,7 @@ I forked style.css from the Live Tweets Template and added styles from the [Simp
 
 ###JavaScript Interaction
 
-Right now, the map is configured in `simpletimeline.js` rather than the standard `script.js`, because I'm still working on some other features (listed in the coming soon section) and testing them out via separate .js files.  There's lots of room for improvement here, but my focus was on getting a better understanding of JavaScript, JSON, and the [MapBox.js API](http://mapbox.com/mapbox.js/api/v0.6.7/#map.panBy). I explored many and implemented several functionalities based on [MapBox.js Examples](http://mapbox.com/mapbox.js/examples/).
+Right now, the map is configured in `timeline.js` rather than the standard `script.js`, because I'm still working on some other features (listed in the coming soon section) and testing them out via separate .js files.  There's lots of room for improvement here, but my focus was on getting a better understanding of JavaScript, JSON, and the [MapBox.js API](http://mapbox.com/mapbox.js/api/v0.6.7/#map.panBy). I explored many and implemented several functionalities based on [MapBox.js Examples](http://mapbox.com/mapbox.js/examples/).
 
 ### Other tools
 

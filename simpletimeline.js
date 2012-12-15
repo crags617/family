@@ -15,12 +15,17 @@ var markerLayer = mapbox.markers.layer()
     .filter(function() { return false })
     .url('../../family/homesv5.geojson', function(err, features) {
 
+      //Set standard delay between clicks (in ms)
+      	var delay = 250;
+      
         // closure for clicking years
         function click_year(y) {
             return function() {
                 var active = document.getElementsByClassName('year-active');
                 if (active.length) active[0].className = '';
                 document.getElementById('y' + y).className = 'year-active';
+              	//Reset delay to 250:
+              	delay = 250;
                 markerLayer.filter(function(f) {
                     return f.properties.start_year == y;
                 });
@@ -65,7 +70,7 @@ var markerLayer = mapbox.markers.layer()
         stop.innerHTML = 'STOP ■';
         stop.href='#';
     
-        play.onclick = function() {
+        /*play.onclick = function() {
           	map.centerzoom({ lat: 40, lon: -83 }, 4);
             var step = first;
             playStep = window.setInterval(function() {
@@ -79,7 +84,25 @@ var markerLayer = mapbox.markers.layer()
                     window.clearInterval(playStep);
                 }
             }, 200);
-        };
+        };*/
+        play.onclick = function() {
+              //or: map.ease.location({ lat: 40, lon: -83 }).zoom(4).optimal();
+              map.centerzoom({ lat: 40, lon: -83 }, 4, true);
+              var step = first;
+              playStep = window.setInterval(function() {
+              if (step <= current) {
+                if (step === 2003) map.centerzoom({ lat: 25, lon: -43 }, 2, animate);
+                //Only re-filter map for important years:
+                if (importantyears[step]) click_year(step)();
+                else delay=100;
+                step++;
+                count++;
+              } else {
+              //Stop animation at last year listed:
+                  window.clearInterval(playStep);
+              }
+              }, delay);
+          };
     
         stop.onclick = function() {
             window.clearInterval(playStep);

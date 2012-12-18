@@ -1,5 +1,3 @@
-//May want to implement Ease features for zooming.
-
 var map = mapbox.map('map');
 map.addLayer(mapbox.layer().id('crags617.cragin_homes_blnk'));
 map.ui.zoomer.add();
@@ -10,11 +8,11 @@ var timeline = document.getElementById('timeline'),
 
 var markerLayer = mapbox.markers.layer()
     
-    // hide all markers before filtering
+    // Hide all markers before filtering
     .filter(function() { return false })
     .url('../../family/homesv5.geojson', function(err, features) {
       
-        // closure for clicking years
+        // Closure for clicking years
         function click_year(y) {
             return function() {
                 var active = document.getElementsByClassName('year-active');
@@ -27,7 +25,7 @@ var markerLayer = mapbox.markers.layer()
             };
         }
       
-        //find earliest year to include:
+        // Find earliest year to include:
       
         var first = features[0].properties.start_year,
             current = 2012,
@@ -39,16 +37,16 @@ var markerLayer = mapbox.markers.layer()
             importantyears[current] = true;
         }
         
-        //find current/latest year:
+        // Find current/latest year:
         current = new Date().getFullYear();
         
-        //make timeline:
+        // Make timeline:
         for (var y = first; y <= current; y++) {
             var a = timeline.appendChild(document.createElement('a'));
             a.innerHTML = y + ' ';
             a.id = 'y' + y;
           	
-          	//only allow clicks on important years
+          	// Only allow clicks on important years
           	if (importantyears[y]) {
               	a.href = '#';
             	a.onclick = click_year(y);
@@ -69,14 +67,14 @@ var markerLayer = mapbox.markers.layer()
               var step = first;
               playStep = window.setInterval(function() {
                 if (step <= current) {
-                  if (step === 2003) map.centerzoom({ lat: 25, lon: -43 }, 2, true);
+                  if (step === 2000) map.centerzoom({ lat: 25, lon: -43 }, 2, true);
                   
-                  //Only re-filter map for important years:
+                  // Only re-filter map for important years:
                   if (importantyears[step]) click_year(step)();
                   step++;
                 } 
                 else {
-                //Stop animation at last year listed:
+                // Stop animation at last year listed:
                     window.clearInterval(playStep);
                 }
               }, 250);
@@ -89,6 +87,7 @@ var markerLayer = mapbox.markers.layer()
     
         click_year(1952)();
     })
+    // Use colored maki icons for markers
     .factory(function(f) {
         var img = document.createElement('img');
         img.className = 'marker-image';
